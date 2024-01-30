@@ -33,7 +33,6 @@ public class UserService {
         User existingUser = userRepository.findById(id)
                 .orElseThrow(() -> new UserNotFoundException("User not found with id: " + id));
 
-        // Update user fields with values from the provided user object
         existingUser.setName(user.getName());
         existingUser.setEmail(user.getEmail());
 
